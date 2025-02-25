@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, extra-light;
+    background-color: #2949b3;
+    color: #333;
+}
+
+.container  {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+/* Título de la categoría */
+.categoria-titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 1.5rem; /* Tamaño del texto más grande */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 20px; /* Espaciado inferior para separar del contenido */
+    color: #333; /* Color del texto */
+}
+/* Título de la categoría */
+.categoria-titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 1.8rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Negrita para destacar */
+    margin-bottom: 20px; /* Espaciado entre el título y las columnas */
+    color: #333; /* Color del texto */
+}
+
+/* Contenedor de categorías */
+.categorias .container {
+    display: flex;
+    flex-direction: column; /* Organiza en columna para que el título quede arriba */
+    align-items: center; /* Alinea al centro horizontalmente */
+}
+
+/* Estilo de los elementos individuales */
+.categoria {
+    display: inline-block; /* Permite mostrar las columnas */
+    margin: 10px; /* Espaciado entre las imágenes */
+    text-align: center; /* Centra el texto debajo de la imagen */
+}
+
+.categoria img {
+    width: 150px; /* Tamaño de las imágenes */
+    height: auto; /* Proporción automática */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+/* Contenedor de productos */
+.productos .container,
+.categorias .container .productos-category {
+    display: grid; /* Usamos CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tres columnas flexibles */
+    gap: 20px; /* Espaciado entre las columnas */
+    justify-items: center; /* Centrar los elementos en las columnas */
+    margin-top: 30px;
+}
+
+/* Estilo individual para cada producto o categoría */
+.producto,
+.categoria {
+    text-align: center; /* Centrar el contenido del producto */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover para los productos */
+.producto:hover,
+.categoria:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Imágenes dentro de productos y categorías */
+.producto img,
+.categoria img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto;
+    max-width: 150px; /* Tamaño máximo para no desbordar */
+    border-radius: 4px;
+}
+
+/* Nombre del producto o categoría */
+.producto p,
+.categoria p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+header {
+    background-color: #0d0f74;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .logo {
+    font-size: 2em;
+    text-align: center;
+}
+
+   
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.search-section {
+    padding: 40px 0;
+    background-color: #2f21f3;
+    text-align: center;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 50%;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.categorias {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.categoria {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.categoria img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#Logoblanco {
+    width: 150px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción original */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin: 20px auto; /* Espaciado alrededor */
+    display: block; /* Centrar si está dentro de un contenedor */
+}
+ 
+
+.categorias p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.productos {
+    padding: 40px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.producto {
+    display: block; 
+    margin: 20px;
+    text-align: center;
+}
+
+.producto img {
+    width: 200px;
+    height: 350px;
+    object-fit:contain;
+    border-radius: 0%;
+}
+
+.producto p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+#carrito {
+   text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin: 20px auto; /* Espaciado alrededor */
+    color: #ffffff;
+    
+    
+}
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button {
+    background-color: #0d0f74;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+footer p {
+    font-size: 1em;
+}
+/* Estilo para el botón flotante */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none; /* Lo ocultamos inicialmente */
+    z-index: 1000;
+  }
+  
+  /* Cambiar color al pasar el cursor */
+  #backToTop:hover {
+    background-color: #0056b3;
+  }
+  
