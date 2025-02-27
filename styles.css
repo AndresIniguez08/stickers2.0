@@ -48,7 +48,7 @@ body {
 }
 
 .categoria img {
-    width: auto; /* Tamaño de las imágenes */
+    width: 200px; /* Tamaño de las imágenes */
     height: auto; /* Proporción automática */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
