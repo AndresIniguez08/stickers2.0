@@ -142,7 +142,23 @@ nav ul li a {
     font-size: 1.2em;
     border-radius: 5px;
     border: 1px solid #ddd;
+    transition: all 0.3s ease;
 }
+
+/* Para dispositivos en modo horizontal (PC o móvil en horizontal) */
+@media (min-width: 768px) {
+    .search-section input {
+        font-size: 1.2em;
+    }
+}
+
+/* Para móviles en modo vertical */
+@media (max-width: 767px) and (orientation: portrait) {
+    .search-section input::placeholder {
+        content: "Busca tus stick"; /* Recorta el texto para que se vea mejor */
+    }
+}
+
 
 .categorias {
     padding: 40px 0;
