@@ -135,8 +135,39 @@ window.onscroll = function() {
   }
 };
 
-// Al hacer clic, regresar al inicio de la página
-mybutton.onclick = function() {
-  document.body.scrollTop = 0; // Para Safari
-  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+// Función para desplazar suavemente hasta la parte superior
+function smoothScrollToTop(duration) {
+  const start = document.documentElement.scrollTop || document.body.scrollTop;
+  const change = -start;  // La diferencia es la cantidad de desplazamiento hacia arriba
+  let startTime = null;
+
+  function animateScroll(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = timestamp - startTime;
+    const increment = easeInOutQuad(progress, start, change, duration);
+
+    document.documentElement.scrollTop = increment; // Desplazamiento de la página
+    document.body.scrollTop = increment; // En caso de que scrollTop no funcione en algunos navegadores
+
+    if (progress < duration) {
+      requestAnimationFrame(animateScroll);
+    } else {
+      document.documentElement.scrollTop = 0; // Asegura que se llegue al destino final
+      document.body.scrollTop = 0;
+    }
+  }
+
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animateScroll);
 }
+
+// Al hacer clic, regresar al inicio de la página con desplazamiento suave
+mybutton.onclick = function() {
+  smoothScrollToTop(1000); // 1000ms (1 segundo) para el desplazamiento suave
+};
